@@ -1,0 +1,22 @@
+<!---this Program is for a digital clock-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="position: relative;display: flex;align-items: center;justify-content: center;padding: 19%;">
+        <div class="clock" style="display: flex;justify-content: center;align-items: center; background-color: blue;color: white;height: 200px; width: 200px;text-align:center; position: relative;"></div>
+    </div>
+</body>
+<script>
+    setInterval(displayHello, 1000);
+
+    function displayHello() {
+	    const t = new Date();
+        document.querySelector(".clock").innerHTML = t.toLocaleTimeString('en-US')
+    }
+</script>
+</html>

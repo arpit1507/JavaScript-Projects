@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <div class="BMI" style="display: inline-block;align-items: center;padding: 100px;">
+        <a>Enter Height in cms:</a>
+        <input type="text" id="height">
+        <br>
+        <br>
+        <a>Enter Weight in Kgs:</a>
+        <input type="text" id="weight">
+        <br>
+        <br>
+        <button id="button">claculate</button>
+    </div>
+    <div class="results"></div>
+</body>
+<script>
+    document.getElementById('button').addEventListener('click',function(){
+    let height=document.getElementById('height').value;
+    let weight=document.getElementById('weight').value;
+    let sum=parseFloat(weight/((height/100)*(height/100)));
+    element=document.createElement('p');
+    textContent=document.createTextNode(sum);
+    element.appendChild(textContent);
+    document.querySelector('.results').appendChild(element);
+    });
+</script>
+</html>

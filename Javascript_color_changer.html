@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Color Changer</title>
+</head>
+<body>
+    <div class="colors" style="position: relative; display: flex; margin: 20% 25% 20% 30%;">
+        <button class="button" id="Red" style="margin: 10px; display: inline; padding: 50px; background-color: red;;" onclick="change_color('red')"></button>
+        <button class="button" id="White" style="margin: 10px; display: inline; padding: 50px; background-color: white;" onclick="change_color('white')"></button>
+        <button class="button" id="Black" style=" margin: 10px; display: inline; padding: 50px; background-color: black;" onclick="change_color('black')"></button>
+        <button class="button" id="Yellow" style="margin: 10px; display: inline; padding: 50px; background-color: yellow;" onclick="change_color('yellow')"></button>
+    </div>
+</body>
+<script>
+    function change_color(color){
+        document.getElementsByTagName('body')[0].style.backgroundColor = color
+    }
+</script>
+</html>
